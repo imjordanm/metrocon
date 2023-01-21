@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter Sanity Homepage",
-        short_name: "Gatsby",
+        name: "Metrocon Construction Perth",
+        short_name: "Metrocon",
         start_url: "/",
         // These can be imported once ESM support lands
         background_color: "#ffe491",

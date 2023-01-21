@@ -1,9 +1,3 @@
-// First, we must import the schema creator
-import createSchema from "part:@sanity/base/schema-creator"
-
-// Then import schema types from any plugins that might expose them
-import schemaTypes from "all:part:@sanity/base/schema-type"
-
 import homepage from "./homepage"
 import homepageLink from "./homepageLink"
 import homepageHero from "./homepageHero"
@@ -39,44 +33,38 @@ import aboutLeadership from "./aboutLeadership"
 import aboutLogoList from "./aboutLogoList"
 
 // Then we give our schema to the builder and provide the result to Sanity
-export default createSchema({
-  // We name our schema
-  name: "default",
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    homepage,
-    homepageLink,
-    homepageHero,
-    homepageFeature,
-    homepageFeatureList,
-    homepageCta,
-    homepageLogo,
-    homepageLogoList,
-    homepageTestimonial,
-    homepageTestimonialList,
-    homepageBenefit,
-    homepageBenefitList,
-    homepageStat,
-    homepageStatList,
-    homepageProduct,
-    homepageProductList,
-    // layout
-    navItem,
-    navItemGroup,
-    socialLink,
-    layoutHeader,
-    layoutFooter,
-    layout,
-    // HTML page
-    page,
-    // about page
-    aboutPage,
-    aboutHero,
-    aboutStat,
-    aboutStatList,
-    aboutProfile,
-    aboutLeadership,
-    aboutLogoList,
-  ]),
-})
+export default [
+  homepage,
+  homepageLink,
+  homepageHero,
+  homepageFeature,
+  homepageFeatureList,
+  homepageCta,
+  homepageLogo,
+  homepageLogoList,
+  homepageTestimonial,
+  homepageTestimonialList,
+  homepageBenefit,
+  homepageBenefitList,
+  homepageStat,
+  homepageStatList,
+  homepageProduct,
+  homepageProductList,
+  // layout
+  navItem,
+  navItemGroup,
+  socialLink,
+  layoutHeader,
+  layoutFooter,
+  layout,
+  // HTML page
+  page,
+  // about page
+  aboutPage,
+  aboutHero,
+  aboutStat,
+  aboutStatList,
+  aboutProfile,
+  aboutLeadership,
+  aboutLogoList,
+]
