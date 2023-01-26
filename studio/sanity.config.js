@@ -2,6 +2,8 @@
 import { defineConfig } from "sanity"
 import { deskTool } from "sanity/desk"
 import { visionTool } from "@sanity/vision"
+import { media } from "sanity-plugin-media"
+
 import schemas from "./schemas/schema"
 import deskStructure from "./deskStructure"
 import { Logo } from "./plugins/Logo"
@@ -11,6 +13,7 @@ export default defineConfig({
   projectId: "umjdnzgf",
   dataset: "production",
   plugins: [
+    media(),
     deskTool({
       structure: deskStructure,
     }),
